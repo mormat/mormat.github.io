@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>react-ui-scheduler</title>
+    <link rel="stylesheet" href="./scheduler.css">
+    <style>
+        h3 small { font-weight: normal }
+        
+        #root {
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            width: 90%;
+        }
+    </style>
+    <script crossorigin src="./scheduler.js"></script>
+  </head>
+  <body>
+      <h3>react-ui-scheduler <small>(github : <a href="https://github.com/mormat/react-ui-scheduler">https://github.com/mormat/react-ui-scheduler</a>)</small></h3>
+      <div id="root">
+          The scheduler should be displayed here (if not then maybe something wrong happened).
+      </div>
+      <script>
+          
+          var date  = new Date(Date.now());
+          var diff  = date.getDate() - date.getDay() + (date.getDay() == 0 ? -6:1);
+          var start = new Date( date.setDate(diff) ).getTime();
+          var interval = 24 * 60 * 60 * 1000;
+          
+          scheduler.bind('#root', {
+            minHour: "08:00",
+            maxHour: "20:00",
+            events: [
+                {
+                    label: "Conference",
+                    date: new Date(start + interval).toISOString().substring(0, 10),
+                    startTime: "14:00",
+                    endTime:   "18:00",
+                    color: "white",
+                    backgroundColor: "rgb(2, 136, 209)"
+                },
+                {
+                    label: "Meeting",
+                    date:  new Date(start + 3 * interval).toISOString().substring(0, 10),
+                    startTime: "10:00",
+                    endTime:   "18:00",
+                    color: "white",
+                    backgroundColor: "#9575cd"
+                },
+                {
+                    label: "Exhibition",
+                    date:  new Date(start + 5 * interval).toISOString().substring(0, 10),
+                    startTime: "10:00",
+                    endTime:   "16:00",
+                    color: "white",
+                    backgroundColor: "#0fc4a7"
+                }
+          ]});
+      </script>
+  </body>
+</html>
