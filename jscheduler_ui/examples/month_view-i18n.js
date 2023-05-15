@@ -1,0 +1,1 @@
+var element=document.getElementById("scheduler"),scheduler=jscheduler_ui.render(element,{viewMode:"month",dateLocale:"it"});document.getElementById("comments").innerHTML=scheduler.getLabel();

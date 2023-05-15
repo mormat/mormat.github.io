@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>react-scheduler</title>
+    <meta name="keywords" content="scheduler, planner, agenda, widget, ui, js, library, component">
+    <meta name="description" content="a simple js scheduler widget written in javascript">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/cerulean/bootstrap.min.css" integrity="sha512-vaImhtQoaCXvevCM/UK+8ND/df0kiQWLtR65wgq0AWShEXLpWHMve0oGgU0q1gq1MbbyEuAhMMlqNmZd7s7wTQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./react_scheduler.css" />
+    <style>
+        
+        .container {
+            max-width: 1000px;
+        }
+        
+        #app {
+            height: 600px;
+        }
+        
+        #footer {
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+                
+    </style>
+  </head>
+  <body>
+      
+    <div class="container">
+                
+        <div class="bg-light p-4 rounded-lg m-3">
+            <h1 class="display-6">react-scheduler</h1>
+            <p class="lead">
+                A React scheduler component
+            </p>
+            <a class="btn btn-primary rounded-0" 
+               href="examples.html" 
+               role="button"
+            >
+                Examples
+            </a>
+            <a class="btn btn-secondary rounded-0 ms-2" 
+               href="https://github.com/mormat/react-scheduler" 
+               role="button"
+            >
+                Github
+            </a>
+            
+        </div>
+        
+        <div id="app"></div>
+        
+        <div id="footer" class="fixed-bottom">
+            Put footer here
+        </div>
+        
+    </div>
+    <script src="./externals/react/react.development.js"></script>
+    <script src="./externals/react-dom/react-dom.development.js"></script>
+    <script src="./react_scheduler.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

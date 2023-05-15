@@ -1,0 +1,1 @@
+var element=document.getElementById("scheduler");jscheduler_ui.render(element,{viewMode:"week",events:[{label:"meeting",start:"2024-09-17 10:00",end:"2024-09-17 12:00",custom_id:"1234"}],eventsClickable:!0,onEventClick:function(e){e.delete()}});
