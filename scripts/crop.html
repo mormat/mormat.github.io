@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello world</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css" integrity="sha512-UtLOu9C7NuThQhuXXrGwx9Jb/z9zPQJctuAgNUBK3Z6kkSYT9wJ+2+dh6klS+TDBCV9kNPBbAxbVD+vCcfGPaA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    	.container { max-width: 1200px }
+    </style>
+  </head>
+  <body>
+   	<div class="container pt-3">
+   		
+   		<form>
+   		<fieldset>
+   		
+		<div class="row">
+
+			<label class="form-label">Sélectionner une image ou un PDF</label>
+			<div class="input-group">
+				 <input type="file" 
+				 		class="form-control"
+				 		accept="image/png, image/jpeg, application/pdf"
+				 		data-bind="event: { change: function() { onFileChange($element.files[0]) } }"
+		 		>
+            </div>
+
+		</div>
+		
+		<hr />
+   		
+        <div class="row">
+			<div class="col-6">
+
+				<img id="subject" data-bind="attr: {src: urlImage}" style="display: block; max-width: 100%" />
+				
+			</div>
+			<div class="col-6">
+
+				<div class="row ms-2" >
+				
+					<div class="col-6">
+				
+						<label class="form-label">
+			        		selected area
+			        	</label>
+						<div class="input-group mb-3">
+							<span class="input-group-text">left</span>
+							 <input type="text" class="form-control" readonly="readonly" data-bind="value: x">
+	 						 <span class="input-group-text">width</span>
+							 <input type="text" class="form-control" readonly="readonly" data-bind="value: width">
+						 </div>
+						<div class="input-group mb-3">
+	  						 <span class="input-group-text">top</span>
+							 <input type="text" class="form-control" readonly="readonly" data-bind="value: y">
+							 <span class="input-group-text">height</span>
+							 <input type="text" class="form-control" readonly="readonly" data-bind="value: height">
+				        </div>		      
+				        
+				        <label class="form-label">
+				        	as query string
+				        </label>
+				        <div class="input-group mb-3">
+					        <textarea class="form-control" readonly="readonly" rows="2" data-bind="value: queryString"></textarea>
+						</div>
+						
+				        <label class="form-label">
+				        	as json
+				        </label>
+				        <div class="input-group mb-3">
+					        <textarea class="form-control" readonly="readonly" rows="2" data-bind="value: JSON.stringify( rect() )"></textarea>
+				        </div>
+
+				        
+		            
+		            </div>     
+		            
+		            <div class="col-6 border-start">
+		            
+			            <!-- ko if: croppedImage -->
+						<div class="row ms-2">
+							<label class="form-label">
+								cropped image
+			            	</label>
+		            	<div class="d-flex justify-content-center">
+							<img 
+								class="img-fluid"
+								data-bind="attr: {src: croppedImage}" 
+							/>
+						</div>
+					</div>
+				<!-- /ko -->
+
+		            
+		            </div>
+	            </div>
+	            
+	            <div class="row ms-2">
+	            	<label class="form-label">
+						text ocr
+	            	</label>
+					<div class="input-group mb-3">
+						<textarea class="form-control"rows="3" data-bind="value: textOcr"></textarea>
+			        </div>
+				</div>
+
+	            
+			</div>
+	    </div>
+   		
+   		</fieldset>
+   		</form>
+   		
+   	</div>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.js" integrity="sha512-JyCZjCOZoyeQZSd5+YEAcFgz2fowJ1F1hyJOXgtKu4llIa0KneLcidn5bwfutiehUTiOuK87A986BZJMko0eWQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js" integrity="sha512-2AL/VEauKkZqQU9BHgnv48OhXcJPx9vdzxN1JrKDVc4FPU/MEE/BZ6d9l0mP7VmvLsjtYwqiYQpDskK9dG8KBA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/5.1.1/tesseract.min.js" integrity="sha512-mpQLT7yiRJ06RkhNTYhVnvvr3c71il3h+wEI16ICc+fnFHxrBRoJrMmDJ8iBY04+U/FgTj7xah5Vbltq5pg+aQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script  src="dist/pdf_utils.js"></script>
+	<script  src="dist/img_utils.js"></script>
+	<script type="text/javascript">
+	
+    	$(document).ready(function() {
+    		
+    		const ViewModel = function() {
+    		
+    			var self = this;
+    		
+    			this.urlImage = ko.observable();
+    			this.x = ko.observable(0);
+    			this.y = ko.observable(0);
+    			this.width  = ko.observable(1);
+    			this.height = ko.observable(1);
+    			this.croppedImage = ko.observable();
+    			this.textOcr = ko.observable('');
+    			this.rect = ko.computed(function() {
+    			
+    				return { 
+    					left: self.x(), 
+    					top: self.y(), 
+    					width: self.width(), 
+    					height: self. height()
+					}
+					
+    			}),
+    			this.queryString = ko.computed(function() {
+    			
+    				const params = new URLSearchParams(self.rect());
+				
+					return params.toString();
+    			
+    			});
+    			this.onFileChange = function(file) {
+				
+					if (file.type === "application/pdf") {
+					
+						pdf_utils.loadPdfFromFile(file).then(function(pdfDoc) {
+						
+						 	pdfDoc.loadPage(1).then(data => self.urlImage(data));
+						
+						});
+						
+						return;
+					
+					}
+
+					const reader = new FileReader();
+					reader.readAsDataURL(file);
+					reader.onload = () => self.urlImage(reader.result);
+					
+				}
+				
+				this.urlImage.subscribe(function(value) {
+
+			  		cropper.replace(value, false);
+			  		
+			  	});
+			  	
+			  	this.rect.subscribe(function(value) {
+
+					self.textOcr(null);
+			  		extractText(viewModel.urlImage(), value).then(function(text) {
+			  			self.textOcr(text);
+			  		});
+
+			  	
+			  	});
+				
+    		}
+    		
+		  	var cropper = new Cropper(
+		  		document.getElementById('subject'),
+		  		{
+				  viewMode: 2,
+				  autoCrop: false,
+				  guides: false,
+				  cropend(event) {
+				  
+					const data = cropper.getData();
+					const canvasData = cropper.getImageData();
+
+				  	viewModel.x(Math.round(data.x * 100 / canvasData.naturalWidth) / 100);
+				  	viewModel.y(Math.round(data.y * 100 / canvasData.naturalHeight) / 100);
+				  	viewModel.width(Math.round( data.width  * 100 / canvasData.naturalWidth) / 100);
+				  	viewModel.height(Math.round(data.height * 100 / canvasData.naturalHeight) / 100);
+
+					viewModel.croppedImage(null);
+					img_utils.cropImage(viewModel.urlImage(), viewModel.rect()).then(function(data) {
+						viewModel.croppedImage(data);
+						// console.log('data', data);
+					});
+
+				  }, 		
+		  		}
+		  	);
+		  	
+		  	function extractText(urlImage, rect) {
+		  	
+		  		return new Promise(function(res, err) {
+		  		
+		  			const img = new Image();
+					img.onload = function() {
+
+						fullRect = {
+							left:   rect.left  * img.width,
+							top:    rect.top   * img.height,
+							width:  rect.width  * img.width,
+							height: rect.height * img.height
+						}			
+						
+			  			Tesseract.createWorker('eng').then(function(worker) {
+							worker.recognize(urlImage, { rectangle: fullRect }).then(function(values) {
+								res(values.data.text);
+							});				
+						});
+
+					}
+					img.src = urlImage;
+		  		
+					
+		  		});
+		  	
+		  	}
+		  	
+    		viewModel = new ViewModel();
+			ko.applyBindings(viewModel);
+     });
+    
+    </script>
+  </body>
+</html>

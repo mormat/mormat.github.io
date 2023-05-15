@@ -1,0 +1,12 @@
+Objet: lettre de motivation pour le poste de développeur PHP
+
+Bonjour
+
+  Je me permets de vous contacter car votre offre d'emploi n'est pas sans rappeler la mission que j'ai effectuée chez ACMS (voir cv). En effet, j'ai déjà repris un site web PHP existant dans lequel il a fallu integrer des web services REST et SOAP en remplacement des requêtes SQL existantes. La ressemblance est tellement troublante que je me suis demandé si il ne s'agissait pas du même chef de projet !
+  
+  Quoiqu'il en soit, je suis resté 3 ans et demi chez ACMS et je pense leur avoir apporté toute la satistaction qu'ils espéraient. Avec la qualité de ma prestation, je souhaiterais également vous apporter de la satisfaction pour la réussite de votre projet.
+  
+  Si ma candidature vous intéresse, pourriez-vous me contacter ? Dans l'attente de votre réponse, je vous prie d'agréer à mes salutations distinguées.
+  
+Cdlt,
+Mathieu MOREL
