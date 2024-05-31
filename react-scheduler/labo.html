@@ -15,32 +15,41 @@
             height: 50px;
         }
         
+        table {
+            border: 1px solid black;
+            width: 100%;
+            height: 100%;
+        }
+        
+        td {
+            border: 1px solid black;
+            
+        }
+        
+        #main {
+            border: 1px solid red;
+            width: 500px;
+            height: 400px;
+        }
     </style>
     <link rel="stylesheet" href="./mormat_react_scheduler.css" >
   </head>
   <body>
       
       <div id="main">
-          test page
+          <table>
+              <tr>
+                  <td>foo</td>
+              </tr>
+              <tr>
+                  <td>bar</td>
+              </tr>
+          </table>
       </div>
       
       <textarea id="comments" readonly>
 
       </textarea>
       
-      <script src="./externals/react/react.development.js"></script>
-      <script src="./externals/react-dom/react-dom.development.js"></script>
-      <script src="./mormat_react_scheduler.js"></script>
-      <script src="./notifications.js"></script>
-      <script>
-        renderComponent = function(component, props = {}) {
-            ReactDOM.render(
-                React.createElement(component, props, null), 
-                document.getElementById('main')
-            );
-        }
-        
-
-      </script>
   </body>
 </html>
