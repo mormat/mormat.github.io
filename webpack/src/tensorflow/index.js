@@ -1,0 +1,2 @@
+
+import(['./labo.mjs']);
