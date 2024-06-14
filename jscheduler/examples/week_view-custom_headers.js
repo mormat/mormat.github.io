@@ -1,0 +1,1 @@
+var element=document.getElementById("scheduler");jscheduler.render(element,{viewMode:"week",headerRenderer:function(e){return new Date(e.year,e.monthIndex,e.day).toLocaleString("en-GB",{weekday:"short",month:"short",day:"numeric"})}});

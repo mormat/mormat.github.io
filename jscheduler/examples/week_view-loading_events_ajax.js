@@ -1,0 +1,1 @@
+var element=document.getElementById("scheduler"),scheduler=jscheduler.render(element,{viewMode:"week",currentDate:"2024-08-15"}),dateRange=scheduler.getEventsDateRange();url="./examples/events.json?start="+dateRange.start.getTime()+"&end="+dateRange.end.getTime(),$.get(url,(function(e){scheduler.setEvents(e)})),document.getElementById("comments").innerHTML="loading '"+url+"'";
