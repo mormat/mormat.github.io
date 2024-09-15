@@ -4,7 +4,7 @@
 
 
 
-**Développeur PHP** spécialisé dans la création d'applications Web efficaces, de haute qualité et conviviales. Forte expérience avec les frameworks PHP tels que *__Symfony__*. Également compétent en *__HTML__*, *__CSS__*, *__Javascript/Jquery__*.
+**Développeur PHP** indépendant spécialisé dans la création d'applications Web efficaces, de haute qualité et conviviales. Forte expérience avec les frameworks PHP tels que *__Symfony__*. Également compétent en *__HTML__*, *__CSS__*, *__Javascript/Jquery__*.
 
 Online registration site for employee medical examination
 

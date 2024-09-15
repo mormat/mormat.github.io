@@ -13,10 +13,13 @@ https://github.com/mormat
 
 ### <ins>A MON COMPTE</ins> *(Septembre 2022 - Juillet 2024)*
 
-Développement et maintenance d'applications PHP pour le compte de mes clients. Exemple de réalisations :
-- Une plateforme de jobs center <!-- (http://job-center.jeccomposites.com/) -->
-- Outil PHP de génération de bannières et de prospectus
-- Un intranet pour la prise de congés de salariés
+Développement de `single page applications` en PHP avec les caractéristiques ci-dessous :
+- générer des exports Excel (avec la librairie PHPSpreadSheet)
+- intégrer dans l'interface des components UI javascript tels que DHTMLX. Par exemple, le component Scheduler pour afficher un planning
+- intégration de flux de données (CSV, web services REST et SOAP)
+- manipuler des PDFs grâce à Ghostscript (extraction de pages ou recradage).
+- extraire du texte depuis des images ou un PDF avec Tesseract-OCR.
+- migrer des applicatifs PHP 5 vers PHP 8
 
 Contrôle qualité avec Cucumber.js / Selenium.
 
