@@ -8,7 +8,7 @@
     "dist": "webpack --mode=production",
     "precucumber": "node features/step_definitions/readme.js README.md tmp",
     "jest": "jest",
-    "labo": "node src/experimenting_tenserflow.mjs"
+    "labo": "node src/tensorflow"
   },
   "author": "",
   "license": "ISC",

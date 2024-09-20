@@ -1,3 +1,3 @@
 import * as tf from '@tensorflow/tfjs';
 
-console.log('tf', tf);
+console.log('tf', tf.sequential);
