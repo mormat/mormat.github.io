@@ -31,7 +31,9 @@ Développement de plugins Wordpress (https://wordpress.org/plugins/scheduler-wid
 
 #### Intervention sur l'Espace Adhérent de l'ACMS (https://adherent.acms.asso.fr/)
 
-Reprise d'un projet existant suite au départ des précédents intervenants :
+Reprise du site de télédéclaration "Espace Adhérent" de l'ACMS (https://adherent.acms.asso.fr/) :
+- Interventions sur le front HTML, Javascript/Jquery, CSS
+- Intégration de web services REST
 - Maintenance et résolution des bugs existants
 - Implémentation des nouvelles fonctionnalités
 

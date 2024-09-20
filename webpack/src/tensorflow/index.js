@@ -1,1 +1,2 @@
-import('./labo.mjs');
+
+import(['./labo.mjs']);

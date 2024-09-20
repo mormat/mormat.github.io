@@ -21,7 +21,7 @@
     "webpack-dev-server": "^5.1.0"
   },
   "dependencies": {
-    "@tensorflow/tfjs": "^4.21.0",
+    "@tensorflow/tfjs-node": "^4.21.0",
     "pdfjs-dist": "^4.6.82",
     "underscore": "^1.13.7"
   }

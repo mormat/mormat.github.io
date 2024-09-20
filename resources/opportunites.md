@@ -1,5 +1,7 @@
+[X] indeed.com (semble être une merde)
 [X] codeur.com (a l'air d'être une merde)
 [X] https://my-freelancer.com/ (probablement une merde quelconque)
+[X] Skillwise (la candidature semble avoir été envoyée mais dans le néant probablement)
 [ ] CNG Consulting (a l'air d'être une merde)
 [ ] WorldWide People
 [X] CAT-Amania
