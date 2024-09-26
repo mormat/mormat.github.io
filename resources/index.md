@@ -8,7 +8,7 @@
 
 Online registration site for employee medical examination
 
-
+Hard skills : Back end,
 Soft skills : problem solving, creativity, flexibility, adaptability, collaboration
 
 Je recherche des missions pour développer en ***PHP/Symfony*** ou ***React*** ou ***Testeur Sélenium/Cucumber***

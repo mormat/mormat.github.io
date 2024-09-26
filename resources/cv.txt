@@ -13,7 +13,7 @@ https://github.com/mormat
 
 ### <ins>A MON COMPTE</ins> *(Septembre 2022 - Juillet 2024)*
 
-Développement d'applications mono-pages en PHP avec les caractéristiques ci-dessous :
+Développement de `single page applications` en PHP avec les caractéristiques ci-dessous :
 - générer des exports Excel (avec la librairie PHPSpreadSheet)
 - intégrer dans l'interface des components UI javascript tels que DHTMLX. Par exemple, le component Scheduler pour afficher un planning
 - intégration de flux de données (CSV, web services REST et SOAP)
