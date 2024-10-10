@@ -1,1 +1,6 @@
-var element=document.getElementById("scheduler");jscheduler.render(element,{viewMode:"week"});
+var element = document.getElementById('scheduler');
+
+jscheduler.render(element, {
+    viewMode: 'week'
+});
+
