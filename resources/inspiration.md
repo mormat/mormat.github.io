@@ -33,6 +33,19 @@ Je suis convaincu que je peux vous aider à réussir en ligne.
 
 Merci pour votre temps et votre attention.
 
+Bonjour Jonathan et Mathias
+
+@Jonathan, que penses-tu d'**importer le fichier de la clé privée dans le champ d'une base de données ?**
+
+Les données d'une base ne sont pas supposés être accessibles depuis l'extérieur (normalement) et puis il existe un type de champ [BLOB](https://mariadb.com/docs/server/ref/mdb/data-types/BLOB/) dans MariaDb pour des fichiers binaires tels que des images, des fichiers Word ou Excel, etc...
+
+Ça me semble être un bon compromis, non ?
+
+Pour moi, ce ne sera pas difficile de me connecter à la base en PHP et de récupérer la valeur de la clé pour l'accés 
+
+Moi je peux me connecter sur la base en PHP et récupérer le stream de la clé privée pour accéder au server. Il n'y a pas de souci.
+
+
 
 
 ----

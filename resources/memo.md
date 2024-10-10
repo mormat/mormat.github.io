@@ -18,3 +18,12 @@ https://independant.io/plateforme-freelance/
 
 ## autre
 https://fr.linkedin.com/posts/vanessa-lesault_je-recherche-un-prestataire-qui-saurait-utiliser-activity-7241410290251120640-qvwA
+
+Bonjour,
+
+   Ci-joint la facture de ma dernière vente client.
+   
+   Par ailleurs, je n'ai pas réussi à créer la facture dans le module Inex Fact. Le module a bien été activé mais un message d'erreur bloquant m'a empêché de créer la facture. Je donnerais plus d'infos sur ce message un peu plus tard. Parce que là, j'ai des choses à faire aujourd'hui et je suis un peu pressé. 
+   
+Cdlt,
+Mathieu MOREL
