@@ -50,6 +50,5 @@
 }
 
 .jscheduler-resize-handler {
-    border: 1px dotted yellow;
     cursor: ns-resize;
 }
