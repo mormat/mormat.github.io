@@ -70,6 +70,9 @@
                     </div>
                     <div class="col-4 text-end">
                         <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                            <input type="radio" class="btn-check" id="btnDayView" autocomplete="off" name="viewMode" value="day">
+                            <label class="btn btn-outline-primary rounded-0" for="btnDayView">day</label>
+                            
                             <input type="radio" class="btn-check" id="btnWeekView" autocomplete="off" name="viewMode" value="week" checked>
                             <label class="btn btn-outline-primary rounded-0" for="btnWeekView">week</label>
 
@@ -143,10 +146,17 @@
     
             $('[name=viewMode]').click(function() {
                 if ($(this).is(':checked')) {
-                    scheduler.setViewMode( $(this).val() );
+                    
+                    var viewMode = $(this).val();
+                    
+                    scheduler.setOptions({
+                        'viewMode': viewMode,
+                        'headersVisible': viewMode !== 'day'
+                    });
+                    
                     updateSchedulerTitle();
                 }
-            });
+            }).filter(':checked').trigger('click');
             
             $('#btnNext').click(function() {
                 scheduler.next();
@@ -164,9 +174,22 @@
             });
             
             function updateSchedulerTitle() {
+                
                 var dateRange = scheduler.getDateRange();
-                    
                 switch(scheduler.getViewMode()) {
+                    case 'day': 
+                        $('#scheduler_title').html(
+                            dateRange.start.toLocaleString(
+                                'en', 
+                                { 
+                                    weekday: 'long', 
+                                    month: 'long', 
+                                    day:'numeric',
+                                    year: 'numeric'
+                                }
+                            )
+                        );
+                        break;
                     case 'week':
                         $('#scheduler_title').html(
                             dateRange.start.toLocaleString(
@@ -199,8 +222,6 @@
                         $('#scheduler_title').html('');
                 }
             }
-            
-            updateSchedulerTitle();
             
         });
         
