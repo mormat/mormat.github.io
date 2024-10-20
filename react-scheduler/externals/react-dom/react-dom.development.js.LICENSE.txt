@@ -12,7 +12,8 @@
    * @license Modernizr 3.0.0pre (Custom Build) | MIT
    */
 
-/** @license React v17.0.2
+/**
+ * @license React
  * react-dom.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.

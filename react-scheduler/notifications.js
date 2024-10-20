@@ -1,1 +1,0 @@
-function notify(i){var n=window.notifications||"";window.notifications=n+i}
