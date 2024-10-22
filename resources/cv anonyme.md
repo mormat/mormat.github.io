@@ -1,23 +1,12 @@
 <p style="font-size: 2em; text-align: center">
-	<span style="font-weight: lighter">Mathieu MOREL</span>
-	<br/>
-	Développeur PHP/Symfony senior certifié React	
+	Développeur PHP/Symfony certifié React	
 </p>
 
 <br/>
 
-<!-- Line break -->
-**Téléphone:** 07 81 03 43 71 -
-**Email:** morelmathieuj@gmail.com
-<!-- Line break -->
-**Localisation:** Saint-Ouen-sur-Seine (93400) - 
-**Date de naissance:** né en 1977
-<!-- Line break -->
-https://github.com/mormat
-
 ## Expérience professionnelle (20 ans)
 
-### <ins>A MON COMPTE</ins> *(Septembre 2022 - Décembre 2024)*
+### <ins>A MON COMPTE</ins> *(Septembre 2022 - Juillet 2024)*
 
 Développement d'applications mono-pages en PHP avec les caractéristiques ci-dessous :
 - générer des exports Excel (avec la librairie PHPSpreadSheet)
@@ -196,7 +185,7 @@ Développements de divers applications en Windev 5.5 et Windev 7 :
 
 ## Certifications
 
-**2024** - REACT (niveau 1). Lien de vérification https://certification.interstate21.com/ + code 5J21UGP
+**2024** - REACT (niveau 1)
 
 **2009** - Certification Zend PHP 5. Authentification Pearson Vue
 <!-- Line break -->

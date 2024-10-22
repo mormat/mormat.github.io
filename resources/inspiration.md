@@ -33,19 +33,46 @@ Je suis convaincu que je peux vous aider à réussir en ligne.
 
 Merci pour votre temps et votre attention.
 
-Bonjour Jonathan et Mathias
 
-@Jonathan, que penses-tu d'**importer le fichier de la clé privée dans le champ d'une base de données ?**
-
-Les données d'une base ne sont pas supposés être accessibles depuis l'extérieur (normalement) et puis il existe un type de champ [BLOB](https://mariadb.com/docs/server/ref/mdb/data-types/BLOB/) dans MariaDb pour des fichiers binaires tels que des images, des fichiers Word ou Excel, etc...
-
-Ça me semble être un bon compromis, non ?
-
-Pour moi, ce ne sera pas difficile de me connecter à la base en PHP et de récupérer la valeur de la clé pour l'accés 
-
-Moi je peux me connecter sur la base en PHP et récupérer le stream de la clé privée pour accéder au server. Il n'y a pas de souci.
-
-
-
+```gherkin
+Scenario: Executing a huge equation
+	Given the variables below:
+		| name | value |
+		| m    | 2     |
+		| n    | 2     |
+		| b    | 0     |
+		| c    | 0     |
+		| d    | 0     |
+		| f    | 0     |
+		| g    | 0     |
+		| h    | 0     |
+		| i    | 0     |
+		| j    | 0     |
+		| k    | 0     |
+		| l    | 0     |
+    And the functions below :
+    	| name    | callable             | supportedType          |
+    	| greater | fn($a,$b) => $a > 1  | ['numeric', 'numeric'] |
+    	| equal   | fn($a,$b) => $a == 1 | ['numeric', 'numeric'] |
+    When I compile and run:
+    """
+        150+
+        100*greater(m+n,5)+
+        (
+        	equal(b,1)*150+
+        	equal(c,1)*150+
+        	equal(d,1)*150+
+        	equal(f,1)*150+
+        	equal(g,1)*100+
+        	equal(h,1)*50+
+        	equal(i,1)*50+
+        	equal(j,1)*150+
+        	equal(k,1)*50+
+        	equal(l,1)*50
+    	)
+    """
+    Then the output should be "<expectedOutput>"
+    
+```
 
 ----

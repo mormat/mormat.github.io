@@ -1,3 +1,11 @@
+
+https://www.softeam.com/
+https://www.neosoft.fr/
+https://www.luklagroup.com/nous-rejoindre/#nos-opportunites
+https://auberon-consulting.fr/nos-offres-de-postes
+https://www.approachpeople.com/fr/candidats
+
+
 [X] freelance.com (une belle perte de temps)
 [X] indeed.com (semble être une merde)
 [X] codeur.com (a l'air d'être une merde)
