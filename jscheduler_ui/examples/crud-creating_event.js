@@ -1,1 +1,1 @@
-var element=document.getElementById("scheduler"),scheduler=jscheduler_ui.render(element,{viewMode:"week",currentDate:"2024-09-17"}),newEvent=scheduler.createEvent();newEvent.update({label:"meeting",start:"2024-09-17 10:00"});
+var element=document.getElementById("scheduler"),scheduler=jscheduler_ui.render(element,{viewMode:"week",currentDate:"2024-09-17"});scheduler.pushEvent({label:"meeting",start:"2024-09-17 10:00"});

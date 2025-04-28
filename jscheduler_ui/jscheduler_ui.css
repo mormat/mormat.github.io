@@ -1,3 +1,7 @@
+/**
+ * @mormat/jscheduler_ui v0.9.4
+ */
+
 .jscheduler_ui {
     font: caption;
 }
@@ -24,6 +28,10 @@
 
 .jscheduler_ui-day_view-body td {
     border-left: 1px solid #d3d3d3;
+}
+
+.jscheduler_ui-event {
+    font-size: small;
 }
 
 .jscheduler_ui-event-day {
@@ -65,4 +73,30 @@
 
 .jscheduler_ui-resize-handler {
     cursor: ns-resize;
+}
+
+.jscheduler_ui-event a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.jscheduler_ui-event:hover a {
+    text-decoration: underline;
+}
+
+.jscheduler_ui-event-edit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.jscheduler_ui-event-edit svg {
+    color: white;
+    display: none;
+}
+
+.jscheduler_ui-event:hover .jscheduler_ui-event-edit svg { 
+    display: inline;
 }

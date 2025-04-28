@@ -1,1 +1,1 @@
-var element=document.getElementById("scheduler"),scheduler=jscheduler_ui.render(element,{viewMode:"week",dateLocale:"it"});document.getElementById("comments").innerHTML=scheduler.getLabel();
+var element=document.getElementById("scheduler"),scheduler=jscheduler_ui.render(element,{viewMode:"week",dateLocale:"it",translations:{edit_event_btn:"Modifica l'evento"},events:[{some_id:1234,label:"some task",start:"2023-05-02 10:00",end:"2023-05-02 12:00"}],eventsEditable:!0});document.getElementById("comments").innerHTML=scheduler.getLabel();
