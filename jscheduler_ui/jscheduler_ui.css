@@ -1,5 +1,5 @@
 /**
- * @mormat/jscheduler_ui v0.9.4
+ * @mormat/jscheduler_ui v0.9.5
  */
 
 .jscheduler_ui {
@@ -42,6 +42,11 @@
     padding-left: 3px;
 }
 
+/**
+ * @todo the classname ends with 'vsep'
+ * but it is actually a horizontal separator
+ * same issue with classname ending with 'hsep'
+ */
 .jscheduler_ui-vsep {
     border-top: 1px dashed #d3d3d3;
 }
@@ -60,6 +65,35 @@
 }
 
 .jscheduler_ui-month_view-numday-inactive {
+    opacity: 0.5;
+}
+
+.jscheduler_ui-year_view thead th {
+    font-size: small;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.jscheduler_ui-year_view tbody th {
+    font-size: small;
+}
+
+.jscheduler_ui-year_view tbody td {
+    background-color: #F5F5F5;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.jscheduler_ui-year_view .jscheduler_ui-hsep {
+    border-left: 1px dashed #d3d3d3;
+}
+
+.jscheduler_ui-year_view-monthday {
+    font-size: x-small;
+    text-align: right;
+    padding: 0 3px 0 0;
+}
+
+.jscheduler_ui-dayoff {
+    background-color: #eff9fa;
     opacity: 0.5;
 }
 
@@ -99,4 +133,64 @@
 
 .jscheduler_ui-event:hover .jscheduler_ui-event-edit svg { 
     display: inline;
+}
+
+.jscheduler_ui th[data-hour]{
+    font-size: 0.9em;
+}
+
+.jscheduler_ui[data-breakpoint="small"] th[data-hour]{
+    font-size: x-small;
+}
+
+.jscheduler_ui[data-breakpoint="small"] .jscheduler_ui-day-header {
+    font-size: x-small;
+}
+
+.jscheduler_ui[data-breakpoint="medium"] th[data-hour]{
+    font-size: small;
+}
+
+.jscheduler_ui[data-breakpoint="medium"] .jscheduler_ui-day-header {
+    font-size: small;
+}
+
+.jscheduler_ui-timeline thead {
+    height: 5%;
+}
+
+.jscheduler_ui-timeline thead th {
+    text-align: center;
+}
+
+.jscheduler_ui-timeline[data-type-view="day"] thead th {
+    font-size: small;
+}
+
+.jscheduler_ui-timeline[data-type-view="month"] thead th {
+    font-size: x-small;
+}
+
+.jscheduler_ui-timeline tbody td {
+    border-bottom: 1px dotted gray;
+    border-right: 1px dotted gray;
+}
+
+.jscheduler_ui-timeline tbody tr:first-child  td {
+    border-top: 1px dotted gray;
+}
+
+.jscheduler_ui-timeline tbody th {
+    border-bottom: 1px dotted gray;
+    border-right: 1px dotted gray;
+    border-left: 1px dotted gray;
+    padding-left: 5px;
+}
+
+.jscheduler_ui-timeline tbody tr:first-child th {
+    border-top: 1px dotted gray;
+}
+
+.jscheduler_ui-timeline .jscheduler_ui-disabled {
+    color: gray;
 }
